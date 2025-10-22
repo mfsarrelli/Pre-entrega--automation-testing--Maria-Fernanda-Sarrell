@@ -3,16 +3,16 @@ from selenium.webdriver.common.by import By
 ##from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
-#import time
+import time
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-URL = 'https://www.saucedemo.com'
+URL = 'https://www.saucedemo.com/'
 USERNAME = 'standard_user'
 PASSWORD =  'secret_sauce'
 
 def get_driver():
-
+    ##abrimos navegador 
     ##options = Options()
     ##options.add_argument('--start-maximized')
 
@@ -27,7 +27,7 @@ def get_driver():
 
 
 
-def login_saucedemo( driver ):
+def login_saucedemo(driver):
     driver.get(URL)
 
     ##INGRESAR LAS CREDENCIALES
@@ -35,4 +35,4 @@ def login_saucedemo( driver ):
     driver.find_element(By.NAME, 'password').send_keys(PASSWORD)
     driver.find_element(By.ID, 'login-button').click()
 
-    time
+    time.sleep(5)

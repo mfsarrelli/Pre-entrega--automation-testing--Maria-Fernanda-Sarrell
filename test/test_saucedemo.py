@@ -1,17 +1,17 @@
 import pytest
-from utils.helpers import login_saucedemo, get_driver
+
 from selenium.webdriver.common.by import By
 import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__),'..')))
 
-
 from utils.helpers import login_saucedemo, get_driver
 
 
 
 
-@pytest.fixture(scope='session')
+
+@pytest.fixture(scope='session') ##mantiene la sesion del navegador iniciada para que se ejecuten todos los test
 def driver():
     # configuracion para consultar a selenium web driver
     driver = get_driver()

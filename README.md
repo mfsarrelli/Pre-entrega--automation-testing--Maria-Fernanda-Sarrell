@@ -10,4 +10,12 @@ Automatizar interacciones en el sitio web de www.saucedemo.com, y verificar los 
 -pip install pytest pytest-html selenium 
 
 <<COMANDOS DE EJECUCION:>>
-pytest -v --html=reporte.html
+
+REPOSITORIO GITHUB
+git add.
+git push
+git commit -m "comentarios sobre los cambios realizados"
+
+EJECUCION DE TESTS
+pytest -m pytest -v 
+pytest -v --html=report.html --self-contained-html
